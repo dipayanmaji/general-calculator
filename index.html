@@ -1,1 +1,45 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>General Calculator</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div id="calculator">
+        <div id="display">
+            <input onkeypress="return /[0-9]/i.test(event.key)" id="ansDisplay"/>
+            <button type="button" id="clr" onclick="resetClicked()">C</button>
+        </div>
+        <!-- buttons -->
+        <div id="buttons">
+            <section id="numericBtn">
+                <button onclick="clicked(event)" class="number" id="block1" value="1">1</button>
+                <button onclick="clicked(event)" class="number" id="block2" value="2">2</button>
+                <button onclick="clicked(event)" class="number" id="block3" value="3">3</button>
+                <button onclick="clicked(event)" class="number" id="block4" value="4">4</button>
+                <button onclick="clicked(event)" class="number" id="block5" value="5">5</button>
+                <button onclick="clicked(event)" class="number" id="block6" value="6">6</button>
+                <button onclick="clicked(event)" class="number" id="block7" value="7">7</button>
+                <button onclick="clicked(event)" class="number" id="block8" value="8">8</button>
+                <button onclick="clicked(event)" class="number" id="block9" value="9">9</button>
+                <button onclick="clicked(event)" class="number" id="block0" value="0">0</button>
+    
+                <button onclick="clicked(event)" class="number" id="dot" value="." >.</button>
+                <button onclick="clickedAns()" id="ans">=</button>
+            </section>
+            <section id="operatorBtn">
+                <button onclick="clicked(event)" class="operator" id="plus" value="+">+</button>
+                <button onclick="clicked(event)"  class="operator" id="minus" value="-">-</button>
+                <button onclick="clicked(event)" class="operator" id="multiply" value="*">*</button>
+                <button onclick="clicked(event)" class="operator" id="divide" value="/">/</button>
+            </section>
+    
+        </div>
+    </div>
+    <script src="./script.js"></script>
+</body>
+</html>
